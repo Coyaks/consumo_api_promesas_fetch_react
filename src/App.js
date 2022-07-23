@@ -41,8 +41,17 @@ const Card=(props)=>{
 
   const getDataUserApi= async()=>{
     const data=await fetch('https://jsonplaceholder.typicode.com/users')
-    const users=await data.json()
+    const users=await data.json() 
     setUser(users)
+
+    /* await fetch('https://jsonplaceholder.typicode.com/users')
+    .then(rsp => rsp.json)
+    .catch(error => console.log('Error al hacer peticion'))
+    .then(rsp =>{
+      //setUser(rsp)
+      console.log('rsp ',rsp)
+    }) */
+    
   }
 
   return (
